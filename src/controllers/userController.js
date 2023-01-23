@@ -73,7 +73,6 @@ const show = (req, res) => {
 };
 
 const login = (req, res) => {
-  console.log('login');
   User.findOne({ email: req.body.email }, (err, result) => {
     if (err) res.status(400).send('ha ocurrido un error');
     if (result) {
@@ -89,9 +88,8 @@ const login = (req, res) => {
           process.env.SECRET_KEY,
           { expiresIn: '86400000ms' },
           (err, token) => {
-            console.log(err);
-            console.log({ message: 'Autencicacion Correcta', token });
-            res.json({
+            if (err) return res.status(401).send('Ocurrio un error');
+            return res.json({
               message: 'Autenticacion Correcta111',
               userData: ud,
               token,

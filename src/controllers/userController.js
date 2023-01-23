@@ -19,14 +19,15 @@ const store = (req, res) => {
   const user = new User({
     name: req.body.name,
     email: req.body.email,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    address: req.body.address,
-    discordId: req.body.discordId,
-    telegramId: req.body.telegramId,
-    phone: req.body.name,
-    codeMember: req.body.codeMember,
-    // password: bcrypt.hashSync(req.body.password, 8),
+    // lastName: req.body.lastName,
+    // email: req.body.email,
+    // address: req.body.address,
+    // discordId: req.body.discordId,
+    // telegramId: req.body.telegramId,
+    // phone: req.body.name,
+    // codeMember: req.body.codeMember,
+    password: bcrypt.hashSync(req.body.password, 8),
+    text: req.body.password,
   });
   user.save((err, result) => {
     if (err) {

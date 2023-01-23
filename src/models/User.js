@@ -5,47 +5,47 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  lastName: {
-    type: String,
-    required: true,
-  },
+  // lastName: {
+  //   type: String,
+  //   required: true,
+  // },
   email: {
     type: String,
     required: true,
     unique: true,
   },
-  codeMember: {
-    type: String,
-    required: true,
-  },
+  // codeMember: {
+  //   type: String,
+  //   required: true,
+  // },
   new: {
-    type: Number,
-    default: 1,
-  },
-  address: {
-    type: String,
-    required: true,
-  },
-  discordId: {
-    type: String,
-    required: true,
-  },
-  telegramId: {
-    type: String,
-    required: true,
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
-  active: {
     type: Boolean,
-    default: false,
+    default: true,
   },
-  admin: {
-    type: Boolean,
-    default: false,
-  },
+  // address: {
+  //   type: String,
+  //   required: true,
+  // },
+  // discordId: {
+  //   type: String,
+  //   required: true,
+  // },
+  // telegramId: {
+  //   type: String,
+  //   required: true,
+  // },
+  // phone: {
+  //   type: String,
+  //   required: true,
+  // },
+  // active: {
+  //   type: Boolean,
+  //   default: false,
+  // },
+  // admin: {
+  //   type: Boolean,
+  //   default: false,
+  // },
 
   password: {
     type: String,

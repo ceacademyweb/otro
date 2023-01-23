@@ -89,9 +89,10 @@ const login = (req, res) => {
           process.env.SECRET_KEY,
           { expiresIn: '86400000ms' },
           (err, token) => {
+            console.log(err);
             console.log({ message: 'Autencicacion Correcta', token });
             res.json({
-              message: 'Autenticacion Correcta',
+              message: 'Autenticacion Correcta111',
               userData: ud,
               token,
               status: 200,
